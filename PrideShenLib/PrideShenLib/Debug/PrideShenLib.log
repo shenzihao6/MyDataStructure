@@ -1,0 +1,31 @@
+﻿  Exception.cpp
+e:\mydatastructurelib\prideshenlib\exception.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\mydatastructurelib\prideshenlib\exception.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\mydatastructurelib\prideshenlib\exception.cpp(28): error C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(538): note: 参见“strdup”的声明
+e:\mydatastructurelib\prideshenlib\exception.cpp(29): error C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(538): note: 参见“strdup”的声明
+e:\mydatastructurelib\prideshenlib\exception.cpp(39): error C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(538): note: 参见“strdup”的声明
+e:\mydatastructurelib\prideshenlib\exception.cpp(40): error C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(538): note: 参见“strdup”的声明
+e:\mydatastructurelib\prideshenlib\exception.cpp(49): error C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(538): note: 参见“strdup”的声明
+e:\mydatastructurelib\prideshenlib\exception.cpp(55): error C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _itoa. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdlib.h(1334): note: 参见“itoa”的声明
+  main.cpp
+e:\mydatastructurelib\prideshenlib\linklist.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\mydatastructurelib\prideshenlib\list.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\mydatastructurelib\prideshenlib\exception.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\mydatastructurelib\prideshenlib\linklist.h(78): error C2039: “move”: 不是“PrideShenLib::LinkList<T>”的成员
+e:\mydatastructurelib\prideshenlib\linklist.h(78): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+e:\mydatastructurelib\prideshenlib\linklist.h(92): error C2039: “end”: 不是“PrideShenLib::LinkList<T>”的成员
+e:\mydatastructurelib\prideshenlib\linklist.h(92): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+e:\mydatastructurelib\prideshenlib\linklist.h(98): error C2039: “current”: 不是“PrideShenLib::LinkList<T>”的成员
+e:\mydatastructurelib\prideshenlib\linklist.h(98): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+e:\mydatastructurelib\prideshenlib\linklist.h(111): error C2039: “next”: 不是“PrideShenLib::LinkList<T>”的成员
+e:\mydatastructurelib\prideshenlib\linklist.h(111): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+e:\mydatastructurelib\prideshenlib\dynamicarray.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\mydatastructurelib\prideshenlib\array.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  Object.cpp
+  正在生成代码...
