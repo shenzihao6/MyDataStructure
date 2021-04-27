@@ -33,7 +33,7 @@ public:
     {
         Node* node = new Node();
 
-        if( node != NULL )
+        if( node != nullptr )
         {
             node->value = e;
 

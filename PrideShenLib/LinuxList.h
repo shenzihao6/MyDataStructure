@@ -16,8 +16,8 @@
 
 #define prefetch(x) ((void)x)
 
-#define LIST_POISON1  (NULL)
-#define LIST_POISON2  (NULL)
+#define LIST_POISON1  (nullptr)
+#define LIST_POISON2  (nullptr)
 
 struct list_head {
     struct list_head *next, *prev;
@@ -636,14 +636,14 @@ static void list_splice_tail_init(struct list_head *list,
  * You lose the ability to access the tail in O(1).
  */
 
-#define HLIST_HEAD_INIT { .first = NULL }
-#define HLIST_HEAD(name) struct hlist_head name = {  .first = NULL }
-#define INIT_HLIST_HEAD(ptr) ((ptr)->first = NULL)
+#define HLIST_HEAD_INIT { .first = nullptr }
+#define HLIST_HEAD(name) struct hlist_head name = {  .first = nullptr }
+#define INIT_HLIST_HEAD(ptr) ((ptr)->first = nullptr)
 /******defined but not used*************
 static void INIT_HLIST_NODE(struct hlist_node *h)
 {
-    h->next = NULL;
-    h->pprev = NULL;
+    h->next = nullptr;
+    h->pprev = nullptr;
 }
 */
 /******defined but not used*************
@@ -703,7 +703,7 @@ static void hlist_add_head(struct hlist_node *n, struct hlist_head *h)
 }
 */
 
-/* next must be != NULL */
+/* next must be != nullptr */
 /******defined but not used*************
 static void hlist_add_before(struct hlist_node *n,
                     struct hlist_node *next)
@@ -747,7 +747,7 @@ static void hlist_move_list(struct hlist_head *old,
     node->first = old->first;
     if (node->first)
         node->first->pprev = &node->first;
-    old->first = NULL;
+    old->first = nullptr;
 }
 */
 

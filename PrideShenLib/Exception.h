@@ -46,15 +46,15 @@ public:
 
 };
 
-class NullPointerException : public Exception//c++对象模型
+class nullptrPointerException : public Exception//c++对象模型
 {
 public:
-    NullPointerException(const char* message) : Exception(message) {}
-    NullPointerException(const char* file, int line) : Exception(file, line) {}
-    NullPointerException(const char* message, const char* file, int line) : Exception(message, file, line) {}
-    NullPointerException(const NullPointerException& e) : Exception(e) {}
+    nullptrPointerException(const char* message) : Exception(message) {}
+    nullptrPointerException(const char* file, int line) : Exception(file, line) {}
+    nullptrPointerException(const char* message, const char* file, int line) : Exception(message, file, line) {}
+    nullptrPointerException(const nullptrPointerException& e) : Exception(e) {}
 
-    NullPointerException& operator =(const NullPointerException& e)
+    nullptrPointerException& operator =(const nullptrPointerException& e)
     {
         Exception::operator=(e);
 

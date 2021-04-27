@@ -215,7 +215,7 @@ public:
     {
         T* helper = new T[len];
 
-        if( helper != NULL )
+        if( helper != nullptr )
         {
             Merge(array, helper, 0, len-1, min2max);
         }

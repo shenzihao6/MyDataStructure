@@ -11,13 +11,13 @@ class SmartPointer : public Pointer<T>
 {
 
 public:
-    SmartPointer(T* p = NULL) : Pointer<T>(p) { }
+    SmartPointer(T* p = nullptr) : Pointer<T>(p) { }
 
     SmartPointer(const SmartPointer<T>& obj)
     {
         this->m_pointer = obj.m_pointer;
 
-        const_cast<SmartPointer<T>&>(obj).m_pointer = NULL;
+        const_cast<SmartPointer<T>&>(obj).m_pointer = nullptr;
     }
 
     SmartPointer<T>& operator= (const SmartPointer<T>& obj)
@@ -28,7 +28,7 @@ public:
 
             this->m_pointer = obj.m_pointer;
 
-            const_cast<SmartPointer<T>&>(obj).m_pointer = NULL;
+            const_cast<SmartPointer<T>&>(obj).m_pointer = nullptr;
 
             delete p;//new 配 delete,要异常安全
         }

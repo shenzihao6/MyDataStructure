@@ -64,7 +64,7 @@ public:
         {
             Node* toDel = this->m_header.next;
 
-            if( toDel != NULL )//因为不像linkList中，有i关于m_length的合法性判断
+            if( toDel != nullptr )//因为不像linkList中，有i关于m_length的合法性判断
             {
                 this->m_header.next = toDel->next;
 
@@ -81,8 +81,8 @@ public:
                 }
                 else
                 {
-                    this->m_header.next = NULL;//这里不清空的话，头结点就指向自己了
-                    this->m_current = NULL;
+                    this->m_header.next = nullptr;//这里不清空的话，头结点就指向自己了
+                    this->m_current = nullptr;
                 }
 
                 this->destroy(toDel);
@@ -125,7 +125,7 @@ public:
              * 只能重新实现find函数了
             int ret = -1;
 
-            last()->next = NULL;
+            last()->next = nullptr;
 
             ret = LinkList<T>::find(e);
 
@@ -157,7 +157,7 @@ public:
         *的时候就有可能发生异常，那么循环链表的性质就会发生改变了
         if( this->m_length > 0 )
         {
-            last()->next = NULL;
+            last()->next = nullptr;
 
             LinkList<T>::clear();
 
@@ -180,9 +180,9 @@ public:
         {
             Node* toDel = this->m_header.next;
 
-            this->m_header.next = NULL;
+            this->m_header.next = nullptr;
             this->m_length = 0;
-            this->m_current = NULL;
+            this->m_current = nullptr;
 
             this->destroy(toDel);
         }
@@ -195,7 +195,7 @@ public:
 
     bool end()
     {
-        return (this->m_length == 0) || (this->m_current == NULL);//this->m_length==0这个限定条件是因为有可能头结点next指向头结点本身
+        return (this->m_length == 0) || (this->m_current == nullptr);//this->m_length==0这个限定条件是因为有可能头结点next指向头结点本身
     }
 
     ~CircleList()

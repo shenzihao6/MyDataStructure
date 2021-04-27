@@ -25,7 +25,7 @@ DynamicList<T>::DynamicList(int capacity)
 {
     this->m_array = new T[capacity];
 
-    if( this->m_array != NULL )
+    if( this->m_array != nullptr )
     {
         this->m_length = 0;
         this->m_capacity = capacity;
@@ -49,7 +49,7 @@ void DynamicList<T>::resize(int capacity)
     {
         T* array = new T[capacity]; //思考：为啥没有直接操作m_array，而是重新定义了一个指针变量？是因为重置后的空间需要之前空间的元素进行赋值啊即array[i]=m_array[i]
 
-        if( array != NULL )
+        if( array != nullptr )
         {
             int length = (this->m_length < capacity ? this->m_length : capacity);
 

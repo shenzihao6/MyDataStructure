@@ -10,12 +10,12 @@ namespace PrideShenLib
 
 Exception::Exception(const char* message)
 {
-    init(message, NULL, 0);
+    init(message, nullptr, 0);
 }
 
 Exception::Exception(const char* file, int line)
 {
-    init(NULL, file, line);
+    init(nullptr, file, line);
 }
 
 Exception::Exception(const char* message, const char* file, int line)
@@ -46,9 +46,9 @@ Exception& Exception::operator= (const Exception& e)
 void Exception::init(const char* message, const char* file, int line)//message这个指针指向的字符串可能是在栈上面，堆上面，全局的数据区上，
                                                           //所以不能直接赋值给m_message
 {                                                         //不能控制message所指向的外部字符串的生命周期，这样写是不安全的。
-    m_message = (message ? strdup(message) : NULL);//相当于自己malloc了一个空间，这个内存的大小为message内存的大小，内存空间为message的内容 ,记得进行内存释放
+    m_message = (message ? strdup(message) : nullptr);//相当于自己malloc了一个空间，这个内存的大小为message内存的大小，内存空间为message的内容 ,记得进行内存释放
 
-    if( file != NULL ) //发生异常的文件名
+    if( file != nullptr ) //发生异常的文件名
     {
         char sl[16] = {0};
 
@@ -58,7 +58,7 @@ void Exception::init(const char* message, const char* file, int line)//message�
         这里直接写的malloc是因为在写这段代码时，我们并没有重载new,为了不抛出异常，就换成了malloc了*/
         m_location = static_cast<char*>(malloc(strlen(file) + strlen(sl) + 2));//这里2是因为存储":"和"\0"这两个字符,但是为啥要static_cast
 
-        if( m_location != NULL)
+        if( m_location != nullptr)
         {
             m_location = strcpy(m_location, file);
             m_location = strcat(m_location, ":");
@@ -75,7 +75,7 @@ void Exception::init(const char* message, const char* file, int line)//message�
     }
     else
     {
-        m_location = NULL;
+        m_location = nullptr;
     }
 }
 const char* Exception::message() const

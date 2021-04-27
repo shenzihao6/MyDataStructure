@@ -17,7 +17,7 @@ protected:
     {
         T* ret = new T[newLen];
 
-        if( ret != NULL )
+        if( ret != nullptr )
         {
             int size = (len < newLen ? len : newLen); //谁小用谁，要保证吧array中指定的元素的部分全部赋值上去,不越界赋值
 
@@ -32,7 +32,7 @@ protected:
 
     void update(T* array, int length)
     {
-        if( array != NULL )
+        if( array != nullptr )
         {
             T* temp = this->m_array;
 
@@ -50,7 +50,7 @@ protected:
     void init(T* array, int length)//虽然init函数和update比还有一部分重复的代码，但是不需要重写这些重复，因为这些代码在逻辑上不能算作一个
                                    //独立的函数模块，我们的目的是每一个函数实现一个功能，每一个函数的实现都是非常清晰的，从而消除重复代码
     {
-        if( array != NULL)
+        if( array != nullptr)
         {
             this->m_array = array;
             this->m_length = length;
@@ -67,7 +67,7 @@ public:
         /*
         this->m_array = new T[length];
 
-        if( this->m_array != NULL )
+        if( this->m_array != nullptr )
         {
             m_length = length;
         }
@@ -87,7 +87,7 @@ public:
         /*
         this->m_array = new T[obj.m_length];//这里已经是深拷贝了
 
-        if( this->m_array != NULL )
+        if( this->m_array != nullptr )
         {
             m_length = obj.m_array;
 
@@ -116,7 +116,7 @@ public:
 
             this->m_array = new T[obj.m_length];//这里已经是深拷贝了
 
-            if( this->m_array != NULL )
+            if( this->m_array != nullptr )
             {
                 m_length = obj.m_array;
 
@@ -138,7 +138,7 @@ public:
         {
             T* temp = this->m_array;
 
-            if( array != NULL )
+            if( array != nullptr )
             {
                 for(int i=0; i<obj.m_length; i++)
                 {
@@ -161,7 +161,7 @@ public:
         {
             T* array = new T[obj.m_length];
 
-            if( array != NULL )
+            if( array != nullptr )
             {
                 for(int i=0; i<obj.m_length; i++)
                 {
@@ -203,7 +203,7 @@ public:
             /*
             T* array = new T[length];
 
-            if( array != NULL )
+            if( array != nullptr )
             {
                 int size = (length < m_length ? length : m_length);//这行代码时this->array赋值给array所做的限制
                                                                    //obj.m_array赋值给array不需要限制因为就相当于

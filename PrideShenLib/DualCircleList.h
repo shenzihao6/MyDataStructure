@@ -42,7 +42,7 @@ public:
     {
         INIT_LIST_HEAD(&m_header);
 
-        m_current = NULL;
+        m_current = nullptr;
         this->m_length = 0;
         this->m_step = 1;
 
@@ -61,7 +61,7 @@ public:
 
         i = i % (this->m_length + 1);
 
-        if( node != NULL)
+        if( node != nullptr)
         {
             node->value = e;
 
@@ -152,7 +152,7 @@ public:
     {
         int ret = -1;
         int i = 0;
-        list_head* slider = NULL;
+        list_head* slider = nullptr;
 
         list_for_each(slider, &m_header)
         {
@@ -202,7 +202,7 @@ public:
 
     bool end()
     {
-        return ( m_current == NULL ) || (this->m_length == 0);
+        return ( m_current == nullptr ) || (this->m_length == 0);
     }
 
     T current()

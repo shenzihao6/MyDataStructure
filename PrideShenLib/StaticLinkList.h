@@ -14,11 +14,11 @@ template < typename T, int N >
 class StaticLinkList : public LinkList<T>
 {
 protected:
-    typedef  typename LinkList<T>::Node Node;
+    typedef typename LinkList<T>::Node Node;
 
     struct SNode : public Node
     {
-        void* operator new(unsigned int size, void* loc)
+        void* operator new(unsigned long long size, void* loc)
         {
             (void)size;
             return loc;//只返回指定地址，不申请空间
@@ -33,7 +33,7 @@ protected:
 
     Node* create()
     {
-        SNode* ret = NULL;
+        SNode* ret = nullptr;
 
         for(int i=0; i<N; i++)
         {

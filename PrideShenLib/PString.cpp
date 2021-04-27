@@ -11,7 +11,7 @@ int* String::make_pmt(const char* p)      //O(m)
     int len = strlen(p);
     int* ret = static_cast<int*>(malloc(sizeof(int) * len));
 
-    if( ret != NULL )
+    if( ret != nullptr )
     {
         int ll = 0;
 
@@ -43,7 +43,7 @@ int String::kmp(const char* s, const char* p)    //O(m) + 0(n) = O(m+n)
     int pl = strlen(p);
     int* pmt = make_pmt(p);
 
-    if( (pmt != NULL) && (0 < pl) && (pl <= sl) )
+    if( (pmt != nullptr) && (0 < pl) && (pl <= sl) )
     {
         for(int i=0, j=0; i<sl; i++)
         {
@@ -305,7 +305,7 @@ bool String::equal(const char* l, const char* r, int len) const
 
 bool String::startWith(const char* s) const
 {
-    bool ret = ( s != NULL );
+    bool ret = ( s != nullptr );
 
     if( ret )
     {
@@ -324,7 +324,7 @@ bool String::startWith(const String& s) const
 
 bool String::endOf(const char* s) const
 {
-    bool ret = ( s != NULL );
+    bool ret = ( s != nullptr );
 
     if( ret )
     {
@@ -346,12 +346,12 @@ String& String::insert(int i, const char* s) //返回引用的目的是可以作
 {
     if( (0 <= i) && (i <= m_length) )
     {
-        if( (s != NULL) && (s[0] != '\0') )
+        if( (s != nullptr) && (s[0] != '\0') )
         {
             int len = strlen(s);
             char* str = reinterpret_cast<char*>(malloc(m_length + len + 1));
 
-            if( str != NULL )
+            if( str != nullptr )
             {
                 strncpy(str, m_str, i);
                 strncpy(str + i, s, len);
@@ -445,12 +445,12 @@ String& String::remove(int i, int len)//因为insert函数与remove函数是两�
 
 String& String::remove(const char* s)
 {
-    return remove(indexOf(s), strlen(s ? s : "")); //删除一个null字符也是没有意义的啊？跟insert对比是这么样的说法
+    return remove(indexOf(s), strlen(s ? s : "")); //删除一个nullptr字符也是没有意义的啊？跟insert对比是这么样的说法
 }
 
 String& String::remove(const String& s)
 {
-    return remove(indexOf(s), strlen(s.m_str));//这样效率更高？因为少了一次函数的调用和根本不需要判断为NULL的条件
+    return remove(indexOf(s), strlen(s.m_str));//这样效率更高？因为少了一次函数的调用和根本不需要判断为nullptr的条件
 }
 
 String& String::replace(const char* t, const char* s)

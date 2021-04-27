@@ -83,7 +83,7 @@ bool DualLinkList<T>::move(int i, int step)//要实现后面的版本吗
 template < typename T >
 bool DualLinkList<T>::end()
 {
-    return (m_current == NULL);
+    return (m_current == nullptr);
 }
 
 template < typename T >
@@ -170,11 +170,11 @@ typename DualLinkList<T>::Node* DualLinkList<T>::position(int i) const
 template < typename T >
 DualLinkList<T>::DualLinkList()
 {
-    m_header.next = NULL;
-    m_header.pre = NULL;
+    m_header.next = nullptr;
+    m_header.pre = nullptr;
     m_length = 0;
     m_step = 1;
-    m_current = NULL;
+    m_current = nullptr;
 }
 
 template < typename T >
@@ -192,7 +192,7 @@ bool DualLinkList<T>::insert(int i, const T& e)
     {
         Node* node = create();
 
-        if( node != NULL )
+        if( node != nullptr )
         {
             Node* current = position(i);
             Node* next = current->next;//课本上是next可以用current->next来代替，但是这样的话插入先断next指针的话，就不知道next的位置
@@ -208,10 +208,10 @@ bool DualLinkList<T>::insert(int i, const T& e)
             }
             else
             {
-                node->pre = NULL;
+                node->pre = nullptr;
             }
 
-            if( next != NULL )//插入到最后位置
+            if( next != nullptr )//插入到最后位置
             {
                 next->pre = node;
             }
@@ -245,7 +245,7 @@ bool DualLinkList<T>::remove(int i)
 
         current->next = next;
 
-        if( next != NULL )//删除最后一个结点
+        if( next != nullptr )//删除最后一个结点
         {
             //next->pre = current;//好像换成current也可以啊
             next->pre = toDelete->pre;

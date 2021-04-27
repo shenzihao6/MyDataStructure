@@ -7,7 +7,7 @@ using namespace std;
 namespace PrideShenLib
 {
 
-void* Object::operator new (unsigned int size) throw()
+void* Object::operator new (unsigned long long  size) noexcept
 {
     return malloc(size);
 }
@@ -17,7 +17,7 @@ void Object::operator delete (void* p)
     free(p);
 }
 
-void* Object::operator new[] (unsigned int size) throw()
+void* Object::operator new[] (unsigned long long size) noexcept
 {
     return malloc(size);
 }

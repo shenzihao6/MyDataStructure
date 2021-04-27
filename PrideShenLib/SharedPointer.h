@@ -28,7 +28,7 @@ protected:
     }
 
 public:
-    SharedPointer(T* p = NULL) : m_ref(NULL)
+    SharedPointer(T* p = nullptr) : m_ref(nullptr)
     {
         if( p )
         {
@@ -47,7 +47,7 @@ public:
         }
     }
 
-    SharedPointer(const SharedPointer<T>& obj) : Pointer<T>(NULL)
+    SharedPointer(const SharedPointer<T>& obj) : Pointer<T>(nullptr)
     {
         assign(obj);
     }
@@ -66,7 +66,7 @@ public:
 
     void clear()
     {
-        /*我的这种写法不能保证在构造函数遗漏的p为NULL的情况，m_pointer和m_ref为随机值，拷贝构造中m_ref和m_pointer被拷贝为随机值的情况
+        /*我的这种写法不能保证在构造函数遗漏的p为nullptr的情况，m_pointer和m_ref为随机值，拷贝构造中m_ref和m_pointer被拷贝为随机值的情况
         可能老师没我想的那么复杂哈哈
         if( m_ref )
         {
@@ -76,16 +76,16 @@ public:
             {
                 free(this->m_pointer);//而且在这里也不能这么写
                 free(m_ret);
-                this->m_pointer = NULL;
-                m_ref = NULL;
+                this->m_pointer = nullptr;
+                m_ref = nullptr;
             }
         }
         */
         T* toDel = this->m_pointer;
         int* ref = this->m_ref;
 
-        this->m_pointer = NULL;
-        this->m_ref = NULL;
+        this->m_pointer = nullptr;
+        this->m_ref = nullptr;
 
         if( ref )
         {

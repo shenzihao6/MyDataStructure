@@ -89,13 +89,13 @@ bool LinkList<T>::move(int i, int step)
 template < typename T >
 bool LinkList<T>::end()
 {
-    return (m_current == NULL);
+    return (m_current == nullptr);
 }
 
 template < typename T >
 T LinkList<T>::current()//不返回T的引用合理吗？
 {
-    if( !end() )//==(m_current != NULL)//等价于当前的遍历没有结束，在遍历中貌似这个条件(!end())没作用，但这个条件是有必要的，万一你误用current呢了
+    if( !end() )//==(m_current != nullptr)//等价于当前的遍历没有结束，在遍历中貌似这个条件(!end())没作用，但这个条件是有必要的，万一你误用current呢了
     {
         return m_current->value;
     }
@@ -110,8 +110,8 @@ bool LinkList<T>::next()
 {
     int i = 0;
 
-    while ( (i < m_step) && !end() )//循环条件必须很严格,循环m_step次，并且循环过程中游标不为NULL,不加!end()条件其实也可以，但是这样做不严格
-                                    //就类似于多做了几次NULL = NULL，而此时i肯定是等于m_step
+    while ( (i < m_step) && !end() )//循环条件必须很严格,循环m_step次，并且循环过程中游标不为nullptr,不加!end()条件其实也可以，但是这样做不严格
+                                    //就类似于多做了几次nullptr = nullptr，而此时i肯定是等于m_step
     {
         m_current = m_current->next;
         i++;
@@ -175,10 +175,10 @@ typename LinkList<T>::Node* LinkList<T>::position(int i) const//模板类中的�
 template < typename T >
 LinkList<T>::LinkList()
 {
-    m_header.next = NULL;//之前的元素有没有被销毁，不是我们在创建的时候考虑的，创建的时候，本来链表就是空的
+    m_header.next = nullptr;//之前的元素有没有被销毁，不是我们在创建的时候考虑的，创建的时候，本来链表就是空的
     m_length = 0;
     m_step = 1;
-    m_current = NULL;
+    m_current = nullptr;
 }
 
 template < typename T >
@@ -196,7 +196,7 @@ bool LinkList<T>::insert(int i, const T& e)
     {
         Node* node = create();
 
-        if( node != NULL )
+        if( node != nullptr )
         {
             /*
             Node* current = reinterpret_cast<Node*>(&m_header);
